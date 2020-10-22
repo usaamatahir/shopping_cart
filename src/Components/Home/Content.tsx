@@ -19,7 +19,7 @@ const Content = () => {
       <Grid container justify="center" alignItems="center" spacing={3}>
         {products.map((product: productType, ind: number) => {
           return (
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item md={4} sm={6} xs={12} key={ind}>
               <Card>
                 <CardContent>
                   <img

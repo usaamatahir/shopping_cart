@@ -31,7 +31,6 @@ export const cartSlice = createSlice({
     },
 
     decreaseFromCart: (state, action) => {
-      let notFind = false;
      state.map(product => {
        if(product._productId !== action.payload._productId) {
 
@@ -39,7 +38,6 @@ export const cartSlice = createSlice({
        }
 
        else if(product._productId === action.payload._productId){
-         notFind = true;
          return {...product, quantity: product.quantity-- }
        }
      })
